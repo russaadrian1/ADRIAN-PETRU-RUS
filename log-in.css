@@ -1,0 +1,159 @@
+﻿
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to right, purple, red, yellow);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+}
+
+.page-container > .container {
+    width: 400px;
+    padding: 40px 30px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0px 0px 7px 11px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    width: fit-content;
+    margin: 15px auto 40px;
+    text-align: center;
+    color: #fff;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 8px;
+    margin: 8px auto 0;
+    border-radius: 5px;
+    background: linear-gradient(to right, purple, red, yellow);
+}
+
+.input-group {
+    width: 280px;
+    margin: 25px 0;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+}
+
+.input-group input {
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    outline: none;
+}
+
+.input-group input:valid {
+    border-color: green;
+    border: 4px solid green;
+}
+
+.input-group input:invalid {
+    border-color: red;
+    border: 4px solid red;
+}
+
+#forSubmit {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#forSubmit button {
+    box-shadow: none;
+    display: inline-block;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    width: 200px;
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(to right, #2abfff, #0071ff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 400ms ease-in-out;
+    z-index: 1;
+}
+
+#forSubmit button::after {
+    content: "";
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ff2600, #ff8400);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 400ms ease-in-out;
+}
+
+#forSubmit button:hover::before {
+    opacity: 1;
+}
+
+#forSubmit button:hover::after {
+    opacity: 1;
+    transition: 400ms ease-in-out;
+}
+
+#forSubmit button:hover {
+    transform: translateY(-2px);
+}
+
+#forSubmit button:active {
+    transform: translateY(0);
+}
