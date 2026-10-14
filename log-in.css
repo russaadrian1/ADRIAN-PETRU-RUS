@@ -123,7 +123,7 @@ h1::after {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: 400ms ease-in-out;
+    transition: 0.5s ease-in-out;
     z-index: 1;
 }
 
@@ -138,7 +138,7 @@ h1::after {
     background: linear-gradient(to right, #ff2600, #ff8400);
     opacity: 0;
     z-index: -1;
-    transition: opacity 400ms ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 #forSubmit button:hover::before {
@@ -147,7 +147,7 @@ h1::after {
 
 #forSubmit button:hover::after {
     opacity: 1;
-    transition: 400ms ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 #forSubmit button:hover {
